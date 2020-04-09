@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo list</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <span class="title">Todo list</span>
+  </div>
+  <!-- Project area -->
+  <div id="toggleCont">
+    <button id="toggle">⯇</button>
+    <button id="toggleRight" style="visibility: hidden;">⯈</button>
+  </div>
+  <div id="todoCont" style="visibility: hidden;">
+    <div id="projectInfoCont">
+      <span id="projectDate">Due: </span>
+      <span id="projectPriority">Priority: </span>
+    </div>
+    <div id="projectNameCont">
+      <span id="projectName"></span>
+      <button id="editBtn">Edit</button>
+    </div>
+    <form id="textAreaCont">
+      <textarea id="textArea" spellcheck="false"></textarea>
+    </form>
+  </div>
+  <!-- Create a project form -->
+  <div id="projectFormBG" style="visibility: hidden;">
+    <div id="projectFormCont">
+      <form>
+        <label for="name" class="nameLabel">Name:</label><br>
+        <input type="text" class="name" maxlength="24" spellcheck="false"><br>
+        <input type="submit" value="Create" class="projectSubmit">
+        <button id="cancelProject">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <!-- Create a todo form -->
+  <div id="todoFormBG" style="visibility: hidden;">
+    <div id="todoFormCont">
+      <form>
+        <label for="todoName" class="nameLabel">Name:</label><br>
+        <input type="text" class="todoName" maxlength="24" spellcheck="false"><br>
+        <label for="date" class="dueDateLabel">Due:</label><br>
+        <input type="date" min="" class="dueDate"><br>
+        <label for="priority" class="priorityLabel">Priority:</label><br>
+        <div class="custom-select">
+          <select class="priority">
+            <option>!</option>
+            <option>!!</option>
+            <option>!!!</option>
+          </select>
+        </div><br>
+        <input type="submit" value="Create" class="todoSubmit">
+        <button id="cancelTodo">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <!-- Left side bar -->
+  <div id="projectPCont" style="visibility: visible;">
+    <p id="projectP">Projects</p>
+    <div id="indivPCont">
+    </div>
+    <button id="editProject" style="visibility: hidden; position: absolute;">Edit</button>
+    <button id="createProject">+</button>
+  </div>
+  <!-- Right side bar -->
+  <div id="todoPCont" style="visibility: hidden;">
+    <p id="todoP">Todos</p>
+    <div id="indivTodoCont">
+    </div>
+    <button id="createTodo">+</button>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
